@@ -5,8 +5,9 @@ function runBSTTest(){
 	for(var i = 100; i < 10000; i++){
 		var tree = new BST();
 		var numbers = Array.apply(0, Array(i)).map(function(val, i) { return i; });
+
 		numbers.sort(function(){ return Math.random() - 0.5});
-		for(var j = 0; j < i; j++){
+		for(var j = 0; j < numbers.length; j++){
 			tree.add(numbers[j]);
 		}
 		var comparisons = 0;
@@ -19,10 +20,10 @@ function runBSTTest(){
 		max = comparisons > max? comparisons: max;
 		comps.push([i, comparisons]);
 	}
+	console.log(comps);
 	var end = new Date().getTime();
 	var diff = end - start;
-	console.log(diff / 1000, comps);
-	document.body.style.background = "red";
+	drawChart(comps, max);
 }
 
 function runArrayTest(){
@@ -75,7 +76,8 @@ function drawChart(array, max) {
           hAxis: {title: 'Size', minValue: 0, maxValue: 10000},
           vAxis: {title: 'Comparisons', minValue: 0, maxValue: max},
           legend: 'none',
-          pointSize: 1
+          pointSize: 1,
+          trendlines: { 0: {} }  
         };
 
         var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
