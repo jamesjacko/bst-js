@@ -56,7 +56,7 @@ function binarySearch(array, find){
 
 	while(start <= end){
 		comps++;
-		mid = (start + end) / 2 | 0;
+		mid = (start + end) >> 1;
 		currentElem = array[mid];
 		if(find > currentElem)
 			start = mid + 1;
@@ -69,18 +69,31 @@ function binarySearch(array, find){
 }
 
 function drawChart(array, max) {
-        var data = google.visualization.arrayToDataTable(array);
+    var data = google.visualization.arrayToDataTable(array);
 
-        var options = {
-          title: 'Size Vs Comparisons',
-          hAxis: {title: 'Size', minValue: 0, maxValue: 10000},
-          vAxis: {title: 'Comparisons', minValue: 0, maxValue: max},
-          legend: 'none',
-          pointSize: 1,
-          trendlines: { 0: {} }  
-        };
+    var options = {
+      title: 'Size Vs Comparisons',
+      hAxis: {title: 'Size', minValue: 0, maxValue: 10000},
+      vAxis: {title: 'Comparisons', minValue: 0, maxValue: max},
+      legend: 'none',
+      pointSize: 1
+    };
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
 
-        chart.draw(data, options);
-      }
+    chart.draw(data, options);
+
+    var csvHeader = "data:text/csv;charset=utf-8,";
+    var csvString, csvContent;
+    array.forEach(function(subArray, i){
+	   csvString = subArray.join(",");
+	   csvContent += i < subArray.length ? csvString+ "\n" : csvString;
+	});
+	var encodedUri = encodeURI(csvContent);
+	var link = document.createElement("a");
+	link.setAttribute("href", encodedUri);
+	link.setAttribute("download", "my_data.csv");
+	link.text = "download"
+	document.body.appendChild(link);
+	link.click()
+}
