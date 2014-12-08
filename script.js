@@ -94,6 +94,6 @@ function drawChart(array, max) {
 	link.setAttribute("href", encodedUri);
 	link.setAttribute("download", "my_data.csv");
 	link.text = "download"
-	document.body.appendChild(link);
-	link.click()
+	//document.body.appendChild(link);
+	//link.click()
 }
