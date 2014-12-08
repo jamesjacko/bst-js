@@ -1,0 +1,20 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Definitions}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Binary Search Tree \(BST\)}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{function add\(value\)}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{function contains\(value\)}{subsection.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Binary Search}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Expected Results}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Binary Search Tree}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Binary Search}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Implementation}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Binary Search Tree}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Binary Search}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Results \046 Conclusions}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Binary Search}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Binary Search Tree}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Conclusion}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.4}{Recommendations}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.5}{Limitations}{section.5}% 18
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Sample size}{subsection.5.5}% 19
+\BOOKMARK [3][-]{subsubsection.5.5.2}{Plot Averaging}{subsection.5.5}% 20
